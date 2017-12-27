@@ -23,7 +23,7 @@ class ba():
 
 class kuajiang():
     def __init__(self,screen):
-        self.img=pygame.image.load('./text.png').convert()
+        self.img=pygame.image.load('./text.png')
         self.x=30
         self.y=30
         self.screen=screen
@@ -37,7 +37,7 @@ class jian():
         self.x=x
         self.y=y
         self.screen=screen
-        self.img=pygame.image.load('./jian.ico').convert()
+        self.img=pygame.image.load('./jian.png')
         self.ba=ba
         self.kj=''
         self.createdtime=time.time()
@@ -66,8 +66,8 @@ class jian():
 class gong():
     def __init__(self,screen,ba):
         self.x=290
-        self.y=390
-        self.img=pygame.image.load('./pao.ico').convert()
+        self.y=360
+        self.img=pygame.image.load('./gj.png')
         self.screen=screen
         self.jian=[]
         self.ba = ba
@@ -82,7 +82,7 @@ class gong():
             self.x+=15
         elif keytype == 'space':
             print('space')
-            self.jian.append(jian(self.x+136,self.y,self.screen,self.ba))
+            self.jian.append(jian(self.x+145.5,self.y,self.screen,self.ba))
 
     def draw(self):
         self.screen.blit(self.img, (self.x, self.y))
